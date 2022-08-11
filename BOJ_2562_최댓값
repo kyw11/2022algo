@@ -1,0 +1,33 @@
+import java.util.Scanner;
+/*
+ * 교훈이 있다면 배열 크기를 넉넉하게 주면 그 값이 다 들어가기 전까진 답 안나온다 
+ * 
+ */
+public class BOJ_2562 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int[] arr = new int[9];  //인덱스를 1부터 저장할수있게 해보자
+		int num =0;  //최대값 넣을 변수  //
+		int index = 0; //몇 번째인지 알려주는 변수
+		
+		for(int i=0;i<arr.length;i++) {   //반복하면서 숫자 입력 받기
+			arr[i] = sc.nextInt();
+		}
+		
+		 
+		for(int i=0;i<arr.length;i++) {
+			if(num<arr[i]) {
+				num=arr[i];
+				index = i;
+			}
+			
+				 
+		}
+		System.out.println(num);
+		System.out.println(index+1);
+
+	}
+
+}
